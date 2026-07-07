@@ -1,0 +1,9 @@
+*.session
+*.session-journal
+*.session-wal
+*.session-shm
+__pycache__/
+*.pyc
+data.json
+*.mp4
+*.gif
