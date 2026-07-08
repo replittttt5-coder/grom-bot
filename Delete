@@ -1,39 +1,3 @@
-import asyncio
-import json
-import os
-import random
-import re
-import unicodedata
-from datetime import datetime, timedelta
-from typing import Optional, Tuple
-
-from telethon import TelegramClient, events, Button
-from telethon.extensions import markdown as tl_markdown
-from telethon.tl.types import MessageEntityTextUrl, MessageEntityCustomEmoji, MessageEntitySpoiler
-
-# ========== КОНФИГ ==========
-# Значения ниже — это фолбэки по умолчанию. Если переменные окружения
-# TELEGRAM_API_ID / TELEGRAM_API_HASH / TELEGRAM_BOT_TOKEN заданы — используются они,
-# иначе используются значения по умолчанию (можно просто запустить: python bot.py)
-API_ID = os.environ.get("TELEGRAM_API_ID", "30829847")
-API_HASH = os.environ.get("TELEGRAM_API_HASH", "ee19553ced2ae8139ce441c423ec7a19")
-TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "8543625474:AAHTgmQr6zuxgeyFbyGzOhpzO3f7T1I4KB0")
-
-if not API_ID or not API_HASH:
-    raise RuntimeError(
-        "TELEGRAM_API_ID / TELEGRAM_API_HASH not set. "
-        "Get them for free at https://my.telegram.org -> API Development Tools"
-    )
-if not TOKEN:
-    raise RuntimeError("TELEGRAM_BOT_TOKEN not set in environment")
-
-API_ID = int(API_ID)
-
-ADMIN_IDS = [5454585281]
-
-RANK_NAMES = {1: "Стажёр", 2: "Админ", 3: "Старший админ", 4: "Правая рука"}
-RANK_TRAINEE = 1
-RANK_ADMIN = 2
 RANK_SENIOR = 3
 RANK_RIGHT_HAND = 4
 DAILY_GIVE_LIMITS = {
