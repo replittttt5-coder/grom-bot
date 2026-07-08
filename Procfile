@@ -1,1 +1,1 @@
-worker: python grom-5.py
+worker: python bot.py
