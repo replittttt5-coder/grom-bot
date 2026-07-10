@@ -25,7 +25,7 @@ from telethon.errors import UserNotParticipantError
 # иначе используются значения по умолчанию (можно просто запустить: python bot.py)
 API_ID = os.environ.get("TELEGRAM_API_ID", "30829847")
 API_HASH = os.environ.get("TELEGRAM_API_HASH", "ee19553ced2ae8139ce441c423ec7a19")
-TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "8543625474:AAHTgmQr6zuxgeyFbyGzOhpzO3f7T1I4KB0")
+TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "8543625474:AAETAQV_np80HrZ6ma_fYtc6tjhN723bnQ8"
 
 if not API_ID or not API_HASH:
     raise RuntimeError(
